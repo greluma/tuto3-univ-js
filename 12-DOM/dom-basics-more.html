@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More DOM Basics</title>
+  </head>
+  <body>
+    <h1>Mi titulo</h1>
+    <br />
+    <button onclick="adios()">Cuidado</button>
+    <br />
+    <br />
+    <script>
+      //document.write para lanzar info directamente al flujo html
+      document.write("Saludos desde JS");
+      function adios() {
+        /**
+         *! Cuidado con document.write: si lo usas luego de cargada la pagina...
+         *! ...sobreescribe todos su contenido */
+        document.write("Adios");
+      }
+    </script>
+  </body>
+</html>

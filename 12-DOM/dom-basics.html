@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo DOM</title>
+    <style>
+      .azul {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="cabecero" class="azul">Ejemplo DOM JS</h1>
+    <p id="parrafo" class="azul">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero?
+    </p>
+    <p id="parrafo2">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, libero
+      sdfsdfsd?
+    </p>
+    <script>
+      /**
+       *! la etiqueta script debe estar antes de los elementos que se quieran modificar **/
+      /**
+       **getElementById
+       */
+      let cabecero = document.getElementById("cabecero"); //se obtiene el objeto en si
+      let parrafo = document.getElementById("parrafo");
+      //   console.log(cabecero.innerHTML); //se obtiene el valor del objeto
+      //   console.log(parrafo.innerHTML);
+      /*parrafo.innerHTML = "Nuevo Valor del parrafo"; //cambiar un valor en el documento */
+
+      /**
+       **getElementsByTagName
+       */
+      let parrafos = document.getElementsByTagName("p"); //devuelve una lista con todos los elementos q posean la misma etiqueta
+      /*console.log(`Numero de parrafos: ${parrafos.length}`);
+      for (const iterator of parrafos) {
+        console.log(iterator.innerHTML);
+      }*/
+
+      /**
+       **getElementsByClassName
+       */
+      let azul = document.getElementsByClassName("azul"); //devuelve una lista con todos los elementos q posean la misma calse
+      /*console.log(`Numero de elementos azules: ${azul.length}`);
+      // console.log(azul);
+      for (const iterator of azul) {
+        console.log(iterator.innerHTML);
+      }*/
+
+      /**
+       **querySelectorAll
+       */
+      let selectorQuery = document.querySelectorAll(".azul#cabecero"); //devuelve una lista con todos los elementos especificados
+      console.log(`Lista Query: ${selectorQuery.length}`);
+      console.log(selectorQuery);
+      for (const iterator of selectorQuery) {
+        console.log(iterator.innerHTML);
+      }
+    </script>
+  </body>
+</html>

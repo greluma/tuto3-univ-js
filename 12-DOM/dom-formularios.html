@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo Formulario con JS</title>
+    <style>
+      #valores {
+        text-align: center;
+        border: 2px dotted white;
+        background-color: blueviolet;
+        color: white;
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="formulario">
+      Nombre : <input type="text" name="nombre" value="Juan" />
+      <br />
+      Apellido : <input type="text" name="apellido" value="Perez" />
+      <br />
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="valores"></div>
+    <script>
+      function mostrarValores() {
+        //recuperando el formulario en la variable formulario
+        let formulario = document.forms["formulario"];
+        //otra forma de hacerlo
+        // let formulario = document.getElementById("formulario");
+        // console.log(formulario);
+
+        //accediendo a todos los elemntos del formualario
+        let texto = "";
+        /*for (const iterator of formulario) {
+          texto += `${iterator.value}<br/>`;
+        }*/
+        // console.log(texto);
+
+        //accediendo a los elementos del formualario de manera individual
+        let nombre = formulario["nombre"];
+        let apellido = formulario["apellido"];
+        texto = nombre.value + "<br/>" + apellido.value;
+
+        //annadiendo la variable texto al div valores
+        document.getElementById("valores").innerHTML = texto;
+      }
+    </script>
+  </body>
+</html>

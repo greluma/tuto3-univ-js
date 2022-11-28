@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        transition: linear 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 onmousedown="rojo(this)" onmouseup="azul(this)" onclick="verde(this)">
+      Titulo 1
+    </h1>
+    <br />
+    <h2>Titulo 2</h2>
+    <br />
+    <script>
+      function rojo(obj) {
+        obj.style.color = "red";
+        console.log("onmousedown para Rojo");
+      }
+      function azul(obj) {
+        obj.style.color = "blue";
+        console.log("onmouseup para Azul");
+      }
+      function verde(obj) {
+        obj.style.color = "green";
+        console.log("onclick para Verde");
+      }
+    </script>
+  </body>
+</html>

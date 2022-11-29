@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicacion Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Aplicacion Calculadora</h1>
+    </header>
+    <section class="main">
+      <article>
+        <div class="operandos-container">
+          <form action="" id="formulario">
+            <div class="operandoA operandos">
+              <h3>Operando A</h3>
+              <input
+                type="number"
+                placeholder="Escribe Operando A"
+                id="operandoA"
+                value="0"
+              />
+            </div>
+            <div class="operandoB operandos">
+              <h3>Operando B</h3>
+              <input
+                type="number"
+                placeholder="Escribe Operando B "
+                value="0"
+                id="operandoB"
+              />
+            </div>
+          </form>
+          <button type="submit" class="sumar-button" onclick="sumar()">
+            Sumar
+          </button>
+        </div>
+      </article>
+      <article class="resulatdo">
+        <h3 id="resultado">NONE</h3>
+      </article>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

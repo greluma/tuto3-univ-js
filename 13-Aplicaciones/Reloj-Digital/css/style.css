@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f15156;
+}
+
+header {
+  background-image: url(../images/fondo.png);
+  background-color: #721121;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+header h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+#reloj-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  max-width: 361px;
+}
+
+#reloj-container div {
+  text-align: center;
+  background-color: #721121;
+  color: white;
+  padding: 1rem;
+  transition: all linear 0.1s;
+}
+
+#reloj-container #horas {
+  font-size: 4rem;
+  display: grid;
+  align-items: center;
+}
+#reloj-container #fecha {
+  font-size: 2rem;
+}

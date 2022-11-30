@@ -5,7 +5,7 @@
 }
 
 ul {
-  list-style: none;
+  list-style: decimal;
 }
 
 h1,
@@ -54,6 +54,7 @@ body {
   padding: 0.5rem;
   font-size: 1.2rem;
   text-decoration: underline;
+  text-transform: capitalize;
 }
 
 /**Article Creador*/
